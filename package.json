@@ -9,6 +9,7 @@
     "chess"
   ],
   "main": "chess.js",
+  "module": "chess.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhlywa/chess.js.git"

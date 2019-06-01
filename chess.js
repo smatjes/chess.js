@@ -1064,8 +1064,8 @@ var Chess = function(fen) {
         return algebraic(from);
       } else if (same_file > 0) {
         /* if the moving piece rests on the same file, use the rank symbol as the
-       * disambiguator
-       */
+         * disambiguator
+         */
         return algebraic(from).charAt(1);
       } else {
         /* else use the file symbol */
@@ -1250,11 +1250,11 @@ var Chess = function(fen) {
     KING: KING,
     SQUARES: (function() {
       /* from the ECMA-262 spec (section 12.6.4):
-                 * "The mechanics of enumerating the properties ... is
-                 * implementation dependent"
-                 * so: for (var sq in SQUARES) { keys.push(sq); } might not be
-                 * ordered correctly
-                 */
+       * "The mechanics of enumerating the properties ... is
+       * implementation dependent"
+       * so: for (var sq in SQUARES) { keys.push(sq); } might not be
+       * ordered correctly
+       */
       var keys = [];
       for (var i = SQUARES.a8; i <= SQUARES.h1; i++) {
         if (i & 0x88) {
@@ -1542,7 +1542,7 @@ var Chess = function(fen) {
       }
 
       /* load the starting position indicated by [Setup '1'] and
-      * [FEN position] */
+       * [FEN position] */
       if (headers['SetUp'] === '1') {
         if (!('FEN' in headers && load(headers['FEN'], true))) {
           // second argument to load: don't clear the headers
@@ -1740,11 +1740,4 @@ var Chess = function(fen) {
   };
 };
 
-/* export Chess object if using node or any other CommonJS compatible
- * environment */
-if (typeof exports !== 'undefined') exports.Chess = Chess;
-/* export Chess object for any RequireJS compatible environment */
-if (typeof define !== 'undefined')
-  define(function() {
-    return Chess;
-  });
+export default Chess;

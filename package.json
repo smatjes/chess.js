@@ -5,9 +5,10 @@
   "author": "Jeff Hlywa <jhlywa@gmail.com> (https://github.com/jhlywa)",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/jhlywa/chess.js",
-  "keywords": ["chess"],
+  "keywords": [
+    "chess"
+  ],
   "main": "chess.js",
-  "filename": "chess.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhlywa/chess.js.git"
@@ -16,7 +17,9 @@
   "npmFileMap": [
     {
       "basePath": "",
-      "files": ["chess*.js"]
+      "files": [
+        "chess*.js"
+      ]
     }
   ],
   "devDependencies": {
@@ -25,7 +28,6 @@
     "uglify-js": "^2.4.21"
   },
   "scripts": {
-    "test": "mocha",
-    "minify": "uglifyjs chess.js -c -m --comments 'license' > chess.min.js"
+    "test": "mocha"
   }
 }
